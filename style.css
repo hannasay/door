@@ -3,7 +3,7 @@
   src: url("./fonts/GothamPro-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: bold;
-  /*ставить на початку базовий шрифт, оптимізація*/
+  /*ставить на 'початку' базовий шрифт, оптимізація*/
   font-display: swap;
   line-height: normal;
 }
@@ -25,6 +25,24 @@
   background: transparent;
   border: none;
   list-style: none;
+  /* перепитати за шрифт, бо тоді і жирний в 14 йде автоматично, а не всюди потрібно */
+  font-size: 14px;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+footer p,
+a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f6f6f6;
 }
 
 .header_main {
@@ -45,33 +63,94 @@
   height: 26px;
 }
 
-.breadcrumb {
+.breadcrumb ul {
   display: flex;
   gap: 4px;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin: 10px 10px;
+  font-size: 16px;
+}
+
+.article {
+  background: #f5f5f5;
 }
 
 .article_img {
   width: 100%;
 }
 
+.article_text > p {
+  font-size: 16px;
+}
+
 .article_text {
-  background: #f5f5f5;
-  padding: 10px 20px 25px 20px;
+  padding: 25px 20px;
   display: flex;
   gap: 25px;
   flex-direction: column;
 }
 
-h2 {
-  font-size: 24px;
+.categories {
+  padding: 25px 20px;
 }
 
-.text14 {
-  font-size: 14px;
+.categories > h2 {
+  margin-bottom: 25px;
 }
 
-.article_text > p {
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  padding: 26px 27px 22px 27px;
+  border: 1px solid #dddddd;
+  margin: 0px 26px 0px 25px;
+}
+
+.card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-right: auto;
+}
+
+.card button {
+  border: 1px solid #262629;
+  padding: 14px 65px 13px 64px;
+}
+
+.series {
+  padding: 50px 20px 130px 20px;
+}
+
+.series > h2 {
+  margin-bottom: 25px;
+}
+
+footer {
+  background-color: #0c8180;
+  padding: 40px 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.inform,
+.inform ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+footer div:last-child p {
   font-size: 16px;
+}
+
+footer div:last-child p:last-child {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+footer div:last-child {
+  align-items: center;
 }
