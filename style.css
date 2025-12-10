@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("./fonts/GothamPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: bold;
+  /*ставить на початку базовий шрифт, оптимізація*/
+  font-display: swap;
+  line-height: normal;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("./fonts/GothamPro-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: light;
+  font-display: swap;
+  line-height: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gotham Pro";
+  background: transparent;
+  border: none;
+  list-style: none;
+}
+
+.header_main {
+  height: 80px;
+  background: linear-gradient(90deg, #0c8180, #304659);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 17px;
+}
+
+.logo > p {
+  color: #f6f6f6;
+  font-size: 16px;
+}
+
+.burger-menu > img {
+  height: 26px;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 4px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.article_img {
+  width: 100%;
+}
+
+.article_text {
+  background: #f5f5f5;
+  padding: 10px 20px 25px 20px;
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.text14 {
+  font-size: 14px;
+}
+
+.article_text > p {
+  font-size: 16px;
+}
