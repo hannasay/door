@@ -21,13 +21,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Gotham Pro";
   background: transparent;
   border: none;
   list-style: none;
-  /* перепитати за шрифт, бо тоді і жирний в 14 йде автоматично, а не всюди потрібно */
-  font-size: 14px;
   text-decoration: none;
+  color: inherit;
+  font-family: "Gotham Pro";
+  font-size: 14px;
 }
 
 h2 {
@@ -38,10 +38,15 @@ h3 {
   font-size: 20px;
 }
 
-footer p,
-a {
+.text_sixt {
+  font-size: 16px;
+}
+
+.text_eight {
   font-size: 18px;
-  font-weight: bold;
+}
+
+.text_color {
   color: #f6f6f6;
 }
 
@@ -54,47 +59,30 @@ a {
   padding: 13px 17px;
 }
 
-.logo > p {
-  color: #f6f6f6;
-  font-size: 16px;
+.logo_img {
+  min-height: 30px;
 }
 
-.burger-menu > img {
+.burger-menu_img {
   height: 26px;
 }
 
-.breadcrumb ul {
+.breadcrumb {
   display: flex;
   gap: 4px;
-  margin: 10px 10px;
-  font-size: 16px;
-}
-
-.article {
-  background: #f5f5f5;
+  padding: 10px 10px;
 }
 
 .article_img {
   width: 100%;
-}
-
-.article_text > p {
-  font-size: 16px;
+  min-height: 300px;
 }
 
 .article_text {
   padding: 25px 20px;
   display: flex;
-  gap: 25px;
   flex-direction: column;
-}
-
-.categories {
-  padding: 25px 20px;
-}
-
-.categories > h2 {
-  margin-bottom: 25px;
+  gap: 25px;
 }
 
 .card {
@@ -104,53 +92,47 @@ a {
   gap: 22px;
   padding: 26px 27px 22px 27px;
   border: 1px solid #dddddd;
-  margin: 0px 26px 0px 25px;
 }
 
-.card > div {
+.card_img {
+  min-height: 369px;
+}
+
+.card_text {
   display: flex;
   flex-direction: column;
   gap: 3px;
-  margin-right: auto;
+  align-self: flex-start;
 }
 
-.card button {
+.card_but {
   border: 1px solid #262629;
-  padding: 14px 65px 13px 64px;
+  width: 230px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.series {
-  padding: 50px 20px 130px 20px;
-}
-
-.series > h2 {
-  margin-bottom: 25px;
-}
-
-footer {
+.footer_main {
   background-color: #0c8180;
-  padding: 40px 45px;
+  font-weight: bold;
+  padding: 30px 20px;
+}
+
+.footer_main p,
+a {
+  font-size: 16px;
+}
+
+.footer_indents {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-.inform,
-.inform ul {
+.inform_gen {
   display: flex;
   flex-direction: column;
   gap: 15px;
-}
-
-footer div:last-child p {
-  font-size: 16px;
-}
-
-footer div:last-child p:last-child {
-  font-size: 14px;
-  font-weight: lighter;
-}
-
-footer div:last-child {
-  align-items: center;
 }
