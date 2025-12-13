@@ -12,35 +12,34 @@
       <div class="header_main">
         <div class="logo">
           <img class="logo_img" src="img/IDEAL.png" alt="IDEAL" />
-          <p class="logo_text text_sixt text_color">Двері від виробника</p>
+          <span class="logo_text text_sixt color_white"
+            >Двері від виробника</span
+          >
         </div>
-        <div class="wide_screens">
-          <div>
-            <nav
-              class="top_menu text_sixt text_color"
-              style="font-weight: bold"
-            >
+        <div class="wide_screen">
+          <div class="header_top">
+            <nav class="top_menu text_bold text_sixt color_white">
               <a href="promotions">Акції</a>
               <a href="work_schedule">Графік роботи</a>
               <a href="video">Відео</a>
-              <div>
-                <a href="company">Компанія</a>
-                <button>
-                  <img src="img/Item.png" alt="Розгорнути" />
-                </button>
-              </div>
+              <button class="dropdown">
+                <span class="text_bold text_sixt color_white">Компанія</span>
+                <img src="img/Item.png" alt="Розгорнути" />
+              </button>
             </nav>
-          </div>
-          <div class="ws_right">
-            <div class="text_eight text_color" style="font-weight: bold">
-              <img src="img/phone-call.png" alt="Viber" />
-              <a href="contact_us">Зв’язатися з нами</a>
-              <img src="img/Item.png" alt="Розгорнути" />
-            </div>
-            <div class="text_eight text_color">
-              <button><b>UA</b></button>
-              <strong>|</strong>
-              <button>RU</button>
+            <div class="ws_right">
+              <button class="dropdown">
+                <img src="img/phone-call.png" alt="Viber" />
+                <span class="text_bold text_eight color_white"
+                  >Зв’язатися з нами</span
+                >
+                <img src="img/Item.png" alt="Розгорнути" />
+              </button>
+              <div class="color_white">
+                <button class="text_bold text_eight">UA</button>
+                <strong class="text_eight">|</strong>
+                <button class="text_eight">RU</button>
+              </div>
             </div>
           </div>
         </div>
@@ -48,27 +47,25 @@
           <img class="burger-menu_img" src="img/Rectangle.jpg" alt="menu" />
         </button>
       </div>
-      <div class="header_bottom">
-        <div>
-          <nav class="bottom_menu text_sixt text_color">
+      <div class="wide_screen">
+        <div class="header_bottom">
+          <nav class="bottom_menu text_bold text_sixt color_white">
             <a href="door_catalog">Каталог дверей</a>
             <a href="door_design">Дизайн дверей</a>
             <a href="locks_hardware">Замки / Фурнітура</a>
             <a href="certificates">Сертифікати</a>
           </nav>
-        </div>
-        <div>
-          <button class="header_btn text_eight">Замовити</button>
+          <button class="header_btn text_bold text_eight">Замовити</button>
         </div>
       </div>
     </header>
     <main>
       <div class="breadcrumb">
-        <p>Головна</p>
+        <span>Головна</span>
         <span>/</span>
-        <p>Каталог дверей</p>
+        <span>Каталог дверей</span>
       </div>
-      <section class="article" style="background: #f5f5f5">
+      <section class="article">
         <img class="article_img" src="img/image 163.png" alt="Головна" />
         <div class="article_text">
           <div>
@@ -91,9 +88,9 @@
           </p>
         </div>
       </section>
-      <section class="categories" style="padding: 25px 20px">
+      <section class="categories">
         <h2>КАТЕГОРІЇ</h2>
-        <div style="padding: 25px">
+        <div class="categories_card">
           <div class="card">
             <h3>Бронедвері</h3>
             <img class="card_img" src="img/image 164.png" alt="Бронедвері" />
@@ -153,7 +150,7 @@
             </div>
             <button class="card_btn">Детальніше</button>
           </div>
-          <div class="card">
+          <div class="card card_wide">
             <h3>Нестандартні</h3>
             <img class="card_img" src="img/image 168.png" alt="Нестандартні" />
             <div class="card_text">
@@ -177,9 +174,9 @@
           </div>
         </div>
       </section>
-      <section class="series" style="padding: 50px 20px 130px 20px">
+      <section class="series">
         <h2>СЕРІЇ</h2>
-        <div style="padding: 25px">
+        <div class="series_card">
           <div class="card">
             <h3>«Гладіатор»</h3>
             <img class="card_img" src="img/image 164.png" alt="«Гладіатор»" />
@@ -190,16 +187,23 @@
             <img class="card_img" src="img/image 165.png" alt="«Кіборг»" />
             <button class="card_btn">Детальніше</button>
           </div>
+          <div class="wide_screen">
+            <div class="card">
+              <h3>«SV»</h3>
+              <img class="card_img" src="img/image 166.png" alt="«SV»" />
+              <button class="card_btn">Детальніше</button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <footer>
-      <div class="footer_main text_color footer_indents">
+      <div class="footer_main color_white footer_indents">
         <div class="logo">
           <img src="img/IDEAL.png" alt="IDEAL" />
-          <p class="text_sixt">Двері від виробника</p>
+          <span class="logo_text text_sixt">Двері від виробника</span>
         </div>
-        <div class="inform footer_indents" style="padding: 30px">
+        <div class="inform footer_indents">
           <div>
             <nav class="inform_gen">
               <a href="promotions">Акції</a>
@@ -243,16 +247,17 @@
             >
           </div>
         </div>
-        <div class="inform_gen" style="text-align: center">
+        <div class="inform_gen license">
           <p>
             “Бронедвері Ідеал” (C) 1999 - 2025.
             <br />
             Усі права захищені
           </p>
-          <p style="font-size: 14px; font-weight: lighter">
+          <p class="license_bottom">
             Копіювання та комерційне використання графічних матеріалів сайту
-            заборонено. При передруку та цитуванні гіперпосилання на цей сайт
-            обов'язкове
+            заборонено.
+            <br />
+            При передруку та цитуванні гіперпосилання на цей сайт обов'язкове
           </p>
         </div>
       </div>

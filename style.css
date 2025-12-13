@@ -30,12 +30,6 @@
   font-size: 14px;
 }
 
-/* @media (min-width: 992px) {
-  .burger-menu {
-    display: none;
-  }
-} */
-
 h2 {
   font-size: 24px;
 }
@@ -52,7 +46,11 @@ h3 {
   font-size: 18px;
 }
 
-.text_color {
+.text_bold {
+  font-weight: bold;
+}
+
+.color_white {
   color: #f6f6f6;
 }
 
@@ -69,25 +67,36 @@ h3 {
   min-height: 30px;
 }
 
-.wide_screens {
+.logo_text {
+  display: block;
+}
+
+.wide_screen {
+  display: none;
+}
+
+.header_top {
   display: flex;
-  gap: 255px;
+  gap: 50px;
 }
 
 .ws_right {
   display: flex;
-  gap: 44px;
-
-  div {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+  align-items: center;
+  gap: 30px;
 }
 
 .top_menu {
   display: flex;
+  align-items: center;
   gap: 30px;
+}
+
+.dropdown {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .burger-menu_img {
@@ -95,17 +104,16 @@ h3 {
 }
 
 .header_bottom {
-  padding: 8px 150px;
+  padding: 8px 30px;
   background-color: #304659;
   display: flex;
-  gap: 120px;
+  justify-content: space-between;
   align-items: center;
-  font-weight: bold;
 }
 
 .bottom_menu {
   display: flex;
-  gap: 80px;
+  gap: 30px;
 }
 
 .header_btn {
@@ -124,6 +132,10 @@ h3 {
   padding: 10px 10px;
 }
 
+.article {
+  background-color: #f5f5f5;
+}
+
 .article_img {
   width: 100%;
   min-height: 300px;
@@ -134,6 +146,14 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+
+.categories {
+  padding: 25px 20px;
+}
+
+.categories_card {
+  padding: 25px;
 }
 
 .card {
@@ -165,6 +185,14 @@ h3 {
   align-items: center;
 }
 
+.series {
+  padding: 50px 20px 130px 20px;
+}
+
+.series_card {
+  padding: 25px;
+}
+
 .footer_main {
   background-color: #0c8180;
   font-weight: bold;
@@ -182,8 +210,204 @@ a {
   gap: 40px;
 }
 
+.inform {
+  padding: 30px;
+}
+
 .inform_gen {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.license {
+  text-align: center;
+}
+
+.license_bottom {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+/* @media (min-width: 768px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .wide_screen {
+    display: block;
+  } 
+
+  .header_main {
+    padding: 30px 30px;
+  }
+} */
+
+@media (min-width: 1024px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .wide_screen {
+    display: block;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  .header_main {
+    padding: 30px 30px;
+  }
+
+  .breadcrumb {
+    padding: 10px 50px;
+  }
+
+  .breadcrumb span {
+    font-size: 16px;
+  }
+
+  .article {
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+  }
+
+  .article_img {
+    width: auto;
+  }
+
+  .article_text {
+    padding: 0px 0px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .article_text span {
+    font-size: 16px;
+  }
+
+  .article_text p {
+    font-size: 18px;
+  }
+
+  .article_text b {
+    font-size: 18px;
+  }
+
+  .categories,
+  .series {
+    padding: 60px 50px 30px 50px;
+    /* padding: 60px 150px 30px 150px; */
+  }
+
+  .categories h2,
+  .series h2 {
+    font-size: 32px;
+  }
+
+  .categories_card {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card_wide .card_text {
+    align-self: auto;
+  }
+
+  .card_wide img {
+    min-height: 449px;
+  }
+
+  .series_card {
+    padding: 40px 0px 120px 0px;
+    display: flex;
+  }
+
+  .footer_main p,
+  a {
+    font-size: 18px;
+  }
+
+  .footer_main {
+    padding: 70px 150px 20px 150px;
+  }
+
+  .license_bottom {
+    font-size: 16px;
+  }
+
+  .inform {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .license {
+    padding: 115px 0px 0px 0px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .wide_screen {
+    display: block;
+  }
+
+  .header_main {
+    padding: 30px 40px 30px 150px;
+  }
+
+  .header_top {
+    display: flex;
+    gap: 260px;
+  }
+
+  .ws_right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .header_bottom {
+    padding: 8px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bottom_menu {
+    display: flex;
+    gap: 80px;
+  }
+
+  .breadcrumb {
+    padding: 10px 150px;
+  }
+
+  .article {
+    padding: 0px 150px;
+    gap: 50px;
+  }
+
+  .categories,
+  .series {
+    padding: 60px 150px 30px 150px;
+  }
+
+  .categories_card {
+    padding: 40px 0px 0px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card_wide {
+    grid-column: span 2;
+  }
 }
