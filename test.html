@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      :root {
+        --main-color: #262629;
+        --white-color: #f6f6f6;
+        --font-main: "Gotham Pro", sans-serif;
+
+        /* breakpoints */
+        --bp-mobile-m: 375px;
+        --bp-mobile-l: 425px;
+        --bp-tablet: 768px;
+        --bp-laptop: 1024px;
+        --bp-laptop-l: 1440px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: transparent;
+        border: none;
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+        font-family: var(--font-main);
+        font-size: 16px;
+        line-height: 18px;
+      }
+
+      button {
+        cursor: pointer;
+        background: transparent;
+        border: none;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100dvh;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      .main-wrapper {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .section-titile {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 38px;
+      }
+
+      .header-top {
+        height: 80px;
+        background: linear-gradient(90deg, #0c8180, #304659);
+      }
+
+      .header-bottom {
+        height: 56px;
+        background: #304659;
+      }
+
+      .breadcrumbs {
+        display: flex;
+        align-items: center;
+        height: 50px;
+      }
+
+      .hero {
+        height: 300px;
+        background: #f5f5f5;
+      }
+
+      .hero-wrapper {
+        display: flex;
+        gap: 70px;
+      }
+
+      .hero__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 29px;
+        flex: 1;
+      }
+
+      .hero__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 54px;
+      }
+
+      .hero__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .hero__desc p,
+      b {
+        font-size: 18px;
+      }
+
+      .hero__title h1 {
+        font-size: 36px;
+      }
+
+      .hero__title h2 {
+        font-weight: normal;
+      }
+
+      .hero__right {
+        width: 444px;
+        height: auto;
+      }
+
+      .category {
+        margin-top: 63px;
+      }
+
+      .category__cards {
+        display: flex;
+        /* justify-content: center; */
+        flex-wrap: wrap;
+      }
+
+      .category__cards_card {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        width: 284px;
+        padding: 26px 27px 22px;
+        border: 1px solid #dddddd;
+      }
+
+      .category__cards_card h4 {
+        text-align: center;
+      }
+
+      .category__cards_card_text {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .category__cards_card_text p,
+      b {
+        font-size: 14px;
+      }
+
+      .category__cards_card_text button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 45px;
+        border: 1px solid #262629;
+        margin-top: 17px;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: normal;
+      }
+
+      .category__cards_card-fat {
+        padding: 26px 144px 22px;
+        width: 567px;
+      }
+
+      .series {
+        margin-block: 148px;
+      }
+
+      footer {
+        height: 510px;
+        background: #0c8180;
+      }
+
+      @media screen and (max-width: 1440px) {
+      }
+
+      @media screen and (max-width: 1175px) {
+        .category__cards_card-fat {
+          padding: 26px 27px 22px;
+          width: 284px;
+        }
+
+        .categoty__cards_card_text {
+          margin-top: auto;
+        }
+
+        .category__cards {
+          justify-content: center;
+        }
+      }
+
+      @media screen and (max-width: calc(1024px - 1px)) {
+        .hero {
+          height: fit-content;
+          padding-bottom: 25px;
+        }
+
+        .hero-wrapper {
+          padding: 0px;
+          flex-direction: column-reverse;
+          gap: 25px;
+        }
+
+        .hero__right {
+          width: 100%;
+        }
+
+        .hero__right img {
+          width: 100%;
+        }
+
+        .hero__left {
+          padding-inline: 20px;
+        }
+
+        .hero__title {
+          height: 41px;
+        }
+
+        .hero__title h1 {
+          font-size: 24px;
+        }
+
+        .hero__title h2 {
+          font-size: 14px;
+        }
+
+        .hero__desc p,
+        b {
+          font-size: 16px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+      }
+
+      @media screen and (max-width: 425px) {
+        .breadcrumbs {
+          font-size: 14px;
+        }
+
+        .category__cards {
+          justify-content: center;
+        }
+      }
+
+      @media screen and (max-width: 375px) {
+      }
+    </style>
+
+    <link rel="stylesheet" href="font.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top"></div>
+      <div class="header-bottom"></div>
+    </header>
+
+    <main>
+      <!-- breadcrumbs -->
+      <section class="breadcrumbs main-wrapper">
+        <span>Головна</span> &nbsp; / &nbsp; <span>Каталог дверей</span>
+      </section>
+
+      <!-- hero -->
+      <section class="hero">
+        <div class="hero-wrapper main-wrapper">
+          <div class="hero__left">
+            <div class="hero__title">
+              <h2>ПРЕМІУМ БЕЗПЕКА</h2>
+              <h1>КАТАЛОГ ДВЕРЕЙ</h1>
+            </div>
+
+            <div class="hero__desc">
+              <p>
+                Наша компанія виробляє
+                <b>бронедвері зламостійкі, кулестійкі та вогнетривкі</b>.
+              </p>
+              <p>
+                Проходить обов’язкову сертифікацію на 3,4,5,6 клас
+                зламостійкості, 2,3 клас кулестійкості та двері вогнетривкі 60
+                хвилин.
+              </p>
+              <p>
+                Сертифікати на бронедвері зломостійкі-куленепробивні EN 1627
+                <br />
+                RC 3, 4, 5, 6 класу, ДСТУ 4547 ОЗК 2, 4 «БО» та ЕІ 60 хв.
+              </p>
+            </div>
+          </div>
+          <div class="hero__right">
+            <img src="img/hero.png" alt="hero-image" />
+          </div>
+        </div>
+      </section>
+
+      <!-- categoty -->
+      <section class="category main-wrapper">
+        <h3 class="section-titile">КАТЕГОРІЇ</h3>
+
+        <div class="category__cards">
+          <div class="category__cards_card">
+            <h4>Бронедвері</h4>
+            <img src="img/image 164.png" alt="door" />
+            <div class="category__cards_card_text">
+              <p>Серія «<b>Гладіатор»</b></p>
+              <p>Серія «<b>Кіборг»</b></p>
+              <p>Серія «<b>SV»</b></p>
+              <p>Індивідуальна комплектація</p>
+              <button>Детальніше</button>
+            </div>
+          </div>
+          <div class="category__cards_card">
+            <h4>Бронедвері</h4>
+            <img src="img/image 164.png" alt="door" />
+            <div class="category__cards_card_text">
+              <p>Серія «<b>Гладіатор»</b></p>
+              <p>Серія «<b>Кіборг»</b></p>
+              <p>Серія «<b>SV»</b></p>
+              <p>Індивідуальна комплектація</p>
+              <button>Детальніше</button>
+            </div>
+          </div>
+          <div class="category__cards_card">
+            <h4>Бронедвері</h4>
+            <img src="img/image 164.png" alt="door" />
+            <div class="category__cards_card_text">
+              <p>Серія «<b>Гладіатор»</b></p>
+              <p>Серія «<b>Кіборг»</b></p>
+              <p>Серія «<b>SV»</b></p>
+              <p>Індивідуальна комплектація</p>
+              <button>Детальніше</button>
+            </div>
+          </div>
+          <div class="category__cards_card">
+            <h4>Бронедвері</h4>
+            <img src="img/image 164.png" alt="door" />
+            <div class="category__cards_card_text">
+              <p>Серія «<b>Гладіатор»</b></p>
+              <p>Серія «<b>Кіборг»</b></p>
+              <p>Серія «<b>SV»</b></p>
+              <p>Індивідуальна комплектація</p>
+              <button>Детальніше</button>
+            </div>
+          </div>
+          <div class="category__cards_card">
+            <h4>Бронедвері</h4>
+            <img src="img/image 164.png" alt="door" />
+            <div class="category__cards_card_text">
+              <p>Серія «<b>Гладіатор»</b></p>
+              <p>Серія «<b>Кіборг»</b></p>
+              <p>Серія «<b>SV»</b></p>
+              <p>Індивідуальна комплектація</p>
+              <button>Детальніше</button>
+            </div>
+          </div>
+          <div class="category__cards_card category__cards_card-fat">
+            <h4>Бронедвері</h4>
+            <img src="img/image 168.png" alt="door" />
+            <div class="categoty__cards_card_text category__cards_card_text">
+              <p>Серія «<b>Гладіатор»</b></p>
+              <p>Серія «<b>Кіборг»</b></p>
+              <p>Серія «<b>SV»</b></p>
+              <p>Індивідуальна комплектація</p>
+              <button>Детальніше</button>
+            </div>
+          </div>
+          <div class="category__cards_card">
+            <h4>Бронедвері</h4>
+            <img src="img/image 164.png" alt="door" />
+            <div class="category__cards_card_text">
+              <p>Серія «<b>Гладіатор»</b></p>
+              <p>Серія «<b>Кіборг»</b></p>
+              <p>Серія «<b>SV»</b></p>
+              <p>Індивідуальна комплектація</p>
+              <button>Детальніше</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- series -->
+      <section class="series main-wrapper">
+        <h3 class="section-titile">СЕРІЇ</h3>
+
+        <div class="category__cards">
+          <div class="category__cards_card">
+            <h4>Бронедвері</h4>
+            <img src="img/image 164.png" alt="door" />
+            <div class="category__cards_card_text">
+              <p>Серія «<b>Гладіатор»</b></p>
+              <p>Серія «<b>Кіборг»</b></p>
+              <p>Серія «<b>SV»</b></p>
+              <p>Індивідуальна комплектація</p>
+              <button>Детальніше</button>
+            </div>
+          </div>
+          <div class="category__cards_card">
+            <h4>Бронедвері</h4>
+            <img src="img/image 164.png" alt="door" />
+            <div class="category__cards_card_text">
+              <p>Серія «<b>Гладіатор»</b></p>
+              <p>Серія «<b>Кіборг»</b></p>
+              <p>Серія «<b>SV»</b></p>
+              <p>Індивідуальна комплектація</p>
+              <button>Детальніше</button>
+            </div>
+          </div>
+          <div class="category__cards_card">
+            <h4>Бронедвері</h4>
+            <img src="img/image 164.png" alt="door" />
+            <div class="category__cards_card_text">
+              <p>Серія «<b>Гладіатор»</b></p>
+              <p>Серія «<b>Кіборг»</b></p>
+              <p>Серія «<b>SV»</b></p>
+              <p>Індивідуальна комплектація</p>
+              <button>Детальніше</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
