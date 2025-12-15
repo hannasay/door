@@ -44,6 +44,16 @@ h3 {
   font-size: 20px;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+main {
+  flex: 1;
+}
+
 .text_sixt {
   font-size: 16px;
 }
@@ -295,9 +305,6 @@ a {
     display: flex;
     flex-direction: row-reverse;
     gap: 60px;
-  }
-
-  .article {
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 20px;
@@ -311,6 +318,10 @@ a {
 
   .article_text span {
     font-size: 16px;
+  }
+
+  .article_img {
+    width: 444px;
   }
 
   .article_text p {
